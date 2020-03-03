@@ -80,7 +80,7 @@
 				<div class="col-md-12 preenchaFormulario">
 					prencha o formulário abaixo, seu perfil será analisado entre 45 e 60 dias. Se você for o tipo de parceiro que estamos procurando, entraremos em contato
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-8">
 					<form method="POST" action="phpmailer.php">
 						<div class="form-group form-sm">
 							<strong><label for="inputNome">nome</label></strong>
