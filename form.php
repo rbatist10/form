@@ -4,11 +4,16 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </header>
 <style>
-	@font-face {
-		font-family: 'Olivetta Medium otf';
+	* {
+		box-sizing: border-box;
+		font-family: 'monteserrant';
 	}
 	body {
 		color: #9D61B0;
+	}
+	h1 {
+		text-align: center;
+		padding: 10px;
 	}
 	.btn-purple.disabled, .btn-purple:disabled {
 		color: #fff;
@@ -20,6 +25,40 @@
 		background-color: #9D61B0;
 		border-color: #9D61B0;
 	}
+	.preenchaFormulario {
+		font-size: 19px;
+		text-align: center;
+		padding: 10px;
+	}
+	.tipoParceiro {
+		width: 200px;
+		height: 145px;
+		border: 5px solid #9d61b0;
+		border-radius: 10px;
+		margin: 15px;
+		font-size: 12px;
+		text-align: center;
+		padding-top: 10px;
+	}
+	a.linkRevendedor {
+		text-decoration: none;
+		color: #9d61b0;
+	}
+	.parceiroRevendedor {
+		float: right;
+	}
+	.parceiroDistribuidor {
+		color: #fff;
+		background-color: #9d61b0;
+		float: left;
+	}
+	a.linkRevendedor:hover {
+		color: #fff!important;
+		background-color: #9d61b0;
+	}
+	.parceiroRevendedor:hover {
+		background-color: #9d61b0;
+	}
 </style>
 <body>
 	
@@ -27,52 +66,60 @@
 		<div class="container" id="inscricao">
 			<h1><strong>Escolha</strong> o tipo de parceiro que você quer ser</h1>
 			<div class="row">
-				<div class="col-md-6"></div>
-				<div class="col-md-6"></div>
-			</div>
-			<div class="col-md-12">
-				prencha o formulário abaixo, seu perfil será analisado entre 45 e 60 dias. Se você for o tipo de parceiro que estamos procurando, entraremos em contato
-			</div>
-			<div class="col-md-6">
-				<form method="POST" action="phpmailer.php">
-					<div class="form-group form-sm">
-						<strong><label for="inputNome">nome</label></strong>
-						<input type="text" name="inputNome" id="inputNome" class="form-control" required autofocus />
+				<div class="col-md-3"></div>
+				<div class="col-md-3 tipoParceiro parceiroRevendedor">
+					<a class="linkRevendedor" href="https://www.revendarubyrose.com.br/loja/cadastro_layout.php?loja=658311&incluir=1" target="_blank">
+						<div class="linkRevendedor"><h3><strong>Revendedor</strong></h3><br>
+						Quero ter uma renda extra e revender os produtos para meus amigos.</div></a>
 					</div>
-					<div class="form-group form-sm">
-						<strong><label for="inputTelefone">telefone</label></strong>
-						<input type="tel" name="inputTelefone" id="inputTelefone" maxlength="13" class="form-control" required OnKeyPress='formatar("## #####-####", this)' />
+					<div class="col-md-3 tipoParceiro parceiroDistribuidor">
+						<h3><strong>Distribuidor</strong></h3><br>
+						Quero distribuir os produtos para os meus clientes que são lojistas.
 					</div>
-					<div class="form-group form-sm">
-						<strong><label for="inputEmail">e-mail</label></strong>
-						<input type="email" name="inputEmail" id="inputEmail" class="form-control" required />
-					</div>
-					<div class="form-group form-sm">
-						<strong><label for="inputEndereco">endereço</label></strong>
-						<input type="text" name="inputEndereco" id="inputEndereco" class="form-control" required />
-					</div>
-					<div class="form-group form-sm">
-						<strong><label for="inputCNPJ">CNPJ</label></strong>
-						<input type="text" name="inputCNPJ" id="inputCNPJ" maxlength="14" class="form-control" OnKeyPress="formatar('##.###.###/####-##', this)" />
-					</div>
-					<div class="form-group form-sm">
-						<strong><label for="inputAnvisa">você possui certificado da anvisa?</label></strong><br>
-						<input type="radio" id="simAnvisa" name="Anvisa" value="sim">
-						<label for="simAnvisa">sim</label>
-						<input type="radio" id="naoAnvisa" name="Anvisa" value="não">
-						<label for="naoAnvisa">não</label>
-					</div>
-					<div class="form-group form-sm">
-						<strong><label for="tempoMercado">há quanto tempo você está no mercado?</label></strong>
-						<input type="text" name="tempoMercado" id="tempoMercado" class="form-control" required />
-					</div>
-					<div class="form-group form-sm">
-						<strong><label for="lojaFisicaOnline">possui loja física e/ou online?</label></strong><br>
-						<input type="radio" id="simLoja" name="LojaFisicaOnline" value="sim">
-						<label for="simLoja">sim</label>
-						<input type="radio" id="naoLoja" name="LojaFisicaOnline" value="não">
-						<label for="naoLoja">não</label>
-					</div>
+				</div>
+				<div class="col-md-12 preenchaFormulario">
+					prencha o formulário abaixo, seu perfil será analisado entre 45 e 60 dias. Se você for o tipo de parceiro que estamos procurando, entraremos em contato
+				</div>
+				<div class="col-md-6">
+					<form method="POST" action="phpmailer.php">
+						<div class="form-group form-sm">
+							<strong><label for="inputNome">nome</label></strong>
+							<input type="text" name="inputNome" id="inputNome" class="form-control" required autofocus />
+						</div>
+						<div class="form-group form-sm">
+							<strong><label for="inputTelefone">telefone</label></strong>
+							<input type="tel" name="inputTelefone" id="inputTelefone" maxlength="13" class="form-control" required OnKeyPress='formatar("## #####-####", this)' />
+						</div>
+						<div class="form-group form-sm">
+							<strong><label for="inputEmail">e-mail</label></strong>
+							<input type="email" name="inputEmail" id="inputEmail" class="form-control" required />
+						</div>
+						<div class="form-group form-sm">
+							<strong><label for="inputEndereco">endereço</label></strong>
+							<input type="text" name="inputEndereco" id="inputEndereco" class="form-control" required />
+						</div>
+						<div class="form-group form-sm">
+							<strong><label for="inputCNPJ">CNPJ</label></strong>
+							<input type="text" name="inputCNPJ" id="inputCNPJ" maxlength="14" class="form-control" OnKeyPress="formatar('##.###.###/####-##', this)" />
+						</div>
+						<div class="form-group form-sm">
+							<strong><label for="inputAnvisa">você possui certificado da anvisa?</label></strong><br>
+							<input type="radio" id="simAnvisa" name="Anvisa" value="sim">
+							<label for="simAnvisa">sim</label>
+							<input type="radio" id="naoAnvisa" name="Anvisa" value="não">
+							<label for="naoAnvisa">não</label>
+						</div>
+						<div class="form-group form-sm">
+							<strong><label for="tempoMercado">há quanto tempo você está no mercado?</label></strong>
+							<input type="text" name="tempoMercado" id="tempoMercado" class="form-control" required />
+						</div>
+						<div class="form-group form-sm">
+							<strong><label for="lojaFisicaOnline">possui loja física e/ou online?</label></strong><br>
+							<input type="radio" id="simLoja" name="LojaFisicaOnline" value="sim">
+							<label for="simLoja">sim</label>
+							<input type="radio" id="naoLoja" name="LojaFisicaOnline" value="não">
+							<label for="naoLoja">não</label>
+						</div>
 					<!-- <div class="form-group form-sm">
 						<strong><label for="vendeOutraMaquiagem">vende outras marcas de maquiagem?</label></strong><br>
 						<input type="radio" id="simMaquiagem" name="vendeMaquiagem" value="simMaquiagem">
