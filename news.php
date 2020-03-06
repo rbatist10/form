@@ -23,7 +23,7 @@
 			padding: 3px 19px;
 			margin-left: 5px;
 		}
-		.inputEmail {
+		input.inputEmail {
 			width: 180px;
 		}
 	</style>
