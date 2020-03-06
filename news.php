@@ -30,8 +30,8 @@
 	
 	<section>
 		<form action="https://www.rubyrose.com.br/newsletter/list.php" method="POST">
-			<input type="text" class="form-group form-sm inputEmail">
-			<input type="submit" name="email" id="email" value="cadastrar" class="btn btn-md btn-purple">
+			<input type="email" name="email" id="email" class="form-group form-sm inputEmail">
+			<input type="submit" value="cadastrar" class="btn btn-md btn-purple">
 		</form>
 	</section>
 
