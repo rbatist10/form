@@ -7,10 +7,6 @@
 		body {
 			color: #9D61B0;
 		}
-		h1 {
-			text-align: center;
-			padding: 10px;
-		}
 		.btn-purple.disabled, .btn-purple:disabled {
 			color: #fff;
 			background-color: #ed7f9f;
