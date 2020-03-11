@@ -21,6 +21,8 @@
 		}
 		input.inputEmail {
 			width: 180px;
+			height: 32px;
+			border-style: none;
 		}
 	</style>
 	
