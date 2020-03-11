@@ -16,7 +16,7 @@
 			color: #fff;
 			background-color: #ed7f9f;
 			border-color: #ed7f9f;
-			padding: 3px 19px;
+			padding: 4px 19px;
 			margin-left: 5px;
 		}
 		input.inputEmail {
