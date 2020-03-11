@@ -23,6 +23,7 @@
 			width: 180px;
 			height: 33px;
 			border-style: none;
+			margin-left: -8px;
 		}
 	</style>
 	
