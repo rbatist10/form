@@ -1,3 +1,4 @@
+  
 <!DOCTYPE html>
 <html lang='pt-br'>
 <header>
@@ -69,6 +70,14 @@
 			background-color: #9d61b0;
 			color: #fff;
 		}
+#inscrever-se {
+background-color: #9D61B0;
+border-color: #9D61B0;
+}
+#inscrever-se:hover {
+color: #9D61B0;
+background-color: #fff;
+}
 	</style>
 	
 	<section>
