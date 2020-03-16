@@ -1,11 +1,4 @@
 	<style>
-		* {
-			box-sizing: border-box;
-			
-		}
-		body {
-			color: #9D61B0;
-		}
 		.btn-purple.disabled, .btn-purple:disabled {
 			color: #fff;
 			background-color: #ed7f9f;
